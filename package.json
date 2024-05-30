@@ -1,0 +1,11 @@
+{
+  "name": "@davidlj95/renovate-config",
+  "version": "0.0.0-PLACEHOLDER",
+  "description": "Renovate configuration presets",
+  "scripts": {
+    "format": "prettier --ignore-unknown --write ."
+  },
+  "devDependencies": {
+    "prettier": "3.2.5"
+  }
+}
