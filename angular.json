@@ -5,7 +5,7 @@
       {
         "matchDepNames": ["node", "@types/node"],
         "matchFileNames": ["package.json"],
-        "allowedVersions": "^18.19.1 || ^20.11.1 || ^22.0.0"
+        "allowedVersions": "^18.19.1 || ^20.11.1"
       },
       {
         "matchDepNames": ["typescript"],
@@ -20,7 +20,7 @@
       {
         "matchDepNames": ["zone.js"],
         "matchFileNames": ["package.json"],
-        "allowedVersions": "0.14.x"
+        "allowedVersions": "~0.14.3"
       }
     ]
   }
