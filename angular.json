@@ -1,6 +1,6 @@
 {
   "v18.0.x": {
-    "description": "Foo",
+    "description": "Angular v18.0.x dependencies version compatibility rules",
     "packageRules": [
       {
         "matchDepNames": ["node", "@types/node"],
