@@ -1,11 +1,12 @@
 # Renovate config
+
 A series of configurations and presets for [Renovate] dependency updates bot
 
 ## Angular
 
 > [!WARNING]
 > This is currently a work in progress
-  
+
 Angular and Angular CLI need some dependencies to operate (apart from their own internal `@angular(-devkit)/*` ones).
 
 Specifically [Node.js], [TypeScript], [RxJS] and [zone.js]
@@ -24,8 +25,7 @@ For instance, to use dependencies compatible with Angular 18.0.x, add the follow
 }
 ```
 
-Checkout the [Angular presets] file for all the available presets.
-
+Checkout the [Angular presets] file for all the available presets. For more information about version compatibility data, check [Angular versions compatibility sources](./angular-versions-compatibility-sources/index.md)
 
 [Angular presets]: ./angular.json
 [Node.js]: https://nodejs.org/
@@ -33,6 +33,4 @@ Checkout the [Angular presets] file for all the available presets.
 [RxJS]: https://rxjs.dev/
 [zone.js]: https://www.npmjs.com/package/zone.js
 [Renovate config]: https://docs.renovatebot.com/configuration-options/
-
-
 [Renovate]: https://www.mend.io/renovate/
