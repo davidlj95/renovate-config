@@ -1,4 +1,8 @@
 {
+  "v18-lts": {
+    "description": "Angular v18 latest version dependencies version compatibility rules",
+    "extends": ["github>davidlj95/renovate-config:angular/v18.0.x"]
+  },
   "v18.0.x": {
     "description": "Angular v18.0.x dependencies version compatibility rules",
     "packageRules": [
