@@ -24,7 +24,7 @@
       {
         "matchDepNames": ["zone.js"],
         "matchFileNames": ["package.json"],
-        "allowedVersions": "~0.14.3"
+        "allowedVersions": "~0.14.0"
       }
     ]
   },
