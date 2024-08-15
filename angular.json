@@ -30,21 +30,12 @@
   },
   "v18.1.x": {
     "description": "Angular v18.1.x dependencies version compatibility rules",
+    "extends": ["github>davidlj95/renovate-config:angular/v18.0.x"],
     "packageRules": [
-      {
-        "matchDepNames": ["node", "@types/node"],
-        "matchFileNames": ["package.json"],
-        "allowedVersions": "^18.19.1 || ^20.11.1 || ^22.0.0"
-      },
       {
         "matchDepNames": ["typescript"],
         "matchFileNames": ["package.json"],
         "allowedVersions": ">=5.4.0 <5.6.0"
-      },
-      {
-        "matchDepNames": ["rxjs"],
-        "matchFileNames": ["package.json"],
-        "allowedVersions": "^6.5.3 || ^7.4.0"
       },
       {
         "matchDepNames": ["zone.js"],
@@ -55,22 +46,8 @@
   },
   "v18.2.x": {
     "description": "Angular v18.2.x dependencies version compatibility rules",
+    "extends": ["github>davidlj95/renovate-config:angular/v18.1.x"],
     "packageRules": [
-      {
-        "matchDepNames": ["node", "@types/node"],
-        "matchFileNames": ["package.json"],
-        "allowedVersions": "^18.19.1 || ^20.11.1 || ^22.0.0"
-      },
-      {
-        "matchDepNames": ["typescript"],
-        "matchFileNames": ["package.json"],
-        "allowedVersions": ">=5.4.0 <5.6.0"
-      },
-      {
-        "matchDepNames": ["rxjs"],
-        "matchFileNames": ["package.json"],
-        "allowedVersions": "^6.5.3 || ^7.4.0"
-      },
       {
         "matchDepNames": ["zone.js"],
         "matchFileNames": ["package.json"],
