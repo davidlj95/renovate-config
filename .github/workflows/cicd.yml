@@ -19,3 +19,15 @@ jobs:
         uses: ./.github/actions/setup
       - name: Run tests
         run: pnpm test
+
+  style:
+    name: Style
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Run format checker
+        run: pnpm run format:check

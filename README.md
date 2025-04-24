@@ -50,7 +50,7 @@ You can configure Renovate to update dependencies whose versions are compatible 
 > Most of the time nothing will happen as no breaking changes should be introduced in a minor version. But who knows 🎱 The good bit: **no need to update the preset config until upgrading to a major version 🎉**
 
 > [!NOTE]
-> `v19-lts` format is actually the [same npm tag format Angular uses to label the latest package release of a major version release](https://www.npmjs.com/package/@angular/core?activeTab=versions)
+> The `v19-lts` format is actually the [same npm tag format Angular uses to label the latest package release of a major version release](https://www.npmjs.com/package/@angular/core?activeTab=versions)
 
 ### Presets list
 
