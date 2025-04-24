@@ -1,0 +1,6 @@
+{
+  "first-weekend-month-morning": {
+    "description": "Schedule updates every first weekend's day of the month at morning",
+    "schedule": "on the 1-7 day of the month on Saturday,Sunday after 9:00 am"
+  }
+}
