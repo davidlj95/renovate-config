@@ -40,13 +40,13 @@ describe("Schedule", () => {
     });
   });
 
-  describe("first weekend month morning schedule", () => {
+  describe("first weekend month day schedule", () => {
     const fifteenthOfFebruary2025 = Date.parse("2025-02-15T00:00:00.000Z");
     const MORNING_TIME = "09:00:00.000";
     const MIDNIGHT_TIME = "00:00:00.000";
     const nextRanges = later
       .schedule(
-        later.parse.text(SCHEDULE_JSON["first-weekend-month-morning"].schedule),
+        later.parse.text(SCHEDULE_JSON["first-weekend-month-day"].schedule),
       )
       .nextRange(3, fifteenthOfFebruary2025);
     const [saturdayRange, sundayRange, nextRange] = nextRanges;
