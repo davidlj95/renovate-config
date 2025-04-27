@@ -1,0 +1,13 @@
+{
+  "dependabot": {
+    "description": "Use dependabot-like Semantic Commits: 'build([dev-]deps)'",
+    "semanticCommitType": "build",
+    "semanticCommitScope": "deps",
+    "packageRules": [
+      {
+        "matchDepTypes": ["devDependencies"],
+        "semanticCommitScope": "deps-dev"
+      }
+    ]
+  }
+}
