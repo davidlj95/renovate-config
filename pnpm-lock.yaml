@@ -8,18 +8,17 @@ importers:
 
   .:
     devDependencies:
-      '@breejs/later':
-        specifier: 4.2.0
-        version: 4.2.0
+      '@cheap-glitch/mi-cron':
+        specifier: 2.0.0
+        version: 2.0.0
       prettier:
         specifier: 3.2.5
         version: 3.2.5
 
 packages:
 
-  '@breejs/later@4.2.0':
-    resolution: {integrity: sha512-EVMD0SgJtOuFeg0lAVbCwa+qeTKILb87jqvLyUtQswGD9+ce2nB52Y5zbTF1Hc0MDFfbydcMcxb47jSdhikVHA==}
-    engines: {node: '>= 10'}
+  '@cheap-glitch/mi-cron@2.0.0':
+    resolution: {integrity: sha512-HtpMH36PLzs7ZMJYaMWz32+4JOKeZHgzd2ms7vX0AdZmxZCu3MlASo+PoWkQaO9vT4ust7AS3j1hG783uxbiyA==}
 
   prettier@3.2.5:
     resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
@@ -28,6 +27,6 @@ packages:
 
 snapshots:
 
-  '@breejs/later@4.2.0': {}
+  '@cheap-glitch/mi-cron@2.0.0': {}
 
   prettier@3.2.5: {}
