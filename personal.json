@@ -48,6 +48,8 @@
   "config": {
     "description": "Personally opinionated and subjective Renovate config I'm comfortable with",
     "extends": [
+      "github>davidlj95/renovate-config:schedule/first-weekend-month-day",
+      "github>davidlj95/renovate-config:commit/dependabot",
       "github>davidlj95/renovate-config:personal/limit",
       "github>davidlj95/renovate-config:personal/timezone",
       "github>davidlj95/renovate-config:personal/tags",
