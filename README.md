@@ -1,31 +1,13 @@
 # Renovate config
 
-A series of configurations and presets for [Renovate] dependency updates bot
+A series of presets for [Renovate] dependency updates bot
 
-## Schedules
+- [Angular](#angular)
+- [Schedule](#schedule)
+- [Personal](#personal)
 
-### Why is this needed?
-
-Renovate allows [scheduling dependency updates](https://docs.renovatebot.com/key-concepts/scheduling/). However, specifying a period when Renovate can start dependency updates is not so easy:
-
-- **Renovate Mend App**: if not self-hosting Renovate, the cloud app will run [from time to time](https://docs.renovatebot.com/known-limitations/#the-mend-renovate-app-and-scheduled-jobs) and see if it's the right moment to do dependency updates based on the configuration. So the schedule you define must take this into account.
-- **Schedule syntax**: at the moment of writing specified via a `cron` or via a string to be parsed with `@breejs/later` library. `cron` lines are not very straight-forward to parse as humans. With the latter, despite more human, can be prone to error. Library may fail to parse it, and [Renovate will reject it if it fails to parse it](https://github.com/renovatebot/renovate/blob/32.241.11/lib/workers/repository/update/branch/schedule.ts#L55-L59). Also specifying it in this more human-friendly syntax [will be deprecated](https://docs.renovatebot.com/key-concepts/scheduling/#deprecated-breejslater-syntax)
-
-Therefore, sharing here some presets that may be useful. They are tested to ensure they behave as expected.
-
-### Usage
-
-### First weekend of the month. During the day.
-
-This will schedule your updates for the first weekend of every month. Saturday and Sunday. Will skip dependency updates at night so you can have sweet dreams. To use it:
-
-```json
-{
-  "extends": [
-    "github>davidlj95/renovate-config:schedule/first-weekend-month-day"
-  ]
-}
-```
+[Renovate config]: https://docs.renovatebot.com/configuration-options/
+[Renovate]: https://www.mend.io/renovate/
 
 ## Angular
 
@@ -88,8 +70,31 @@ For more information about where version compatibility data was extracted from, 
 [TypeScript]: https://www.typescriptlang.org/
 [RxJS]: https://rxjs.dev/
 [zone.js]: https://www.npmjs.com/package/zone.js
-[Renovate config]: https://docs.renovatebot.com/configuration-options/
-[Renovate]: https://www.mend.io/renovate/
+
+## Schedule
+
+### Why is this needed?
+
+Renovate allows [scheduling dependency updates](https://docs.renovatebot.com/key-concepts/scheduling/). However, specifying a period when Renovate can perform dependency updates is not so easy:
+
+- **Renovate Mend App**: if not self-hosting Renovate, the cloud app will run [from time to time](https://docs.renovatebot.com/known-limitations/#the-mend-renovate-app-and-scheduled-jobs) and see if it's the right moment to do dependency updates based on the configuration. So the schedule you define must take this into account.
+- **Schedule syntax**: at the moment of writing specified via a `cron` or via a string to be parsed with `@breejs/later` library. `cron` lines are not very straight-forward to parse as humans. With the latter, despite more human, can be prone to error. Library may fail to parse it, and [Renovate will reject it if it fails to parse it](https://github.com/renovatebot/renovate/blob/32.241.11/lib/workers/repository/update/branch/schedule.ts#L55-L59). Also specifying it in this more human-friendly syntax [will be deprecated](https://docs.renovatebot.com/key-concepts/scheduling/#deprecated-breejslater-syntax)
+
+Therefore, sharing here some presets that may be useful. They are tested to ensure they behave as expected.
+
+### Usage
+
+#### First weekend of the month. During the day.
+
+This will schedule your updates for the first weekend of every month. Saturday and Sunday. Will skip dependency updates at night so you can have sweet dreams. To use it:
+
+```json
+{
+  "extends": [
+    "github>davidlj95/renovate-config:schedule/first-weekend-month-day"
+  ]
+}
+```
 
 ## Personal
 
