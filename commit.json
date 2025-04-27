@@ -5,6 +5,10 @@
     "semanticCommitScope": "deps",
     "packageRules": [
       {
+        "matchPackageNames": ["*"],
+        "semanticCommitType": "build"
+      },
+      {
         "matchDepTypes": ["devDependencies"],
         "semanticCommitScope": "deps-dev"
       }
