@@ -114,9 +114,12 @@ Unless you use the [recommended config preset `config:recommended`](https://docs
 
 Those may not be of your taste. So offering more options in here.
 
-## Usage
+### Usage
 
-### Dependabot
+> [!IMPORTANT]
+> If using `config:recommended` (or any config that uses it), add any commit config preset after it. Otherwise, the configuration will be overwritten by the recommended config preset.
+
+#### Dependabot
 
 I like how Dependabot creates the commit messages. [Documentation is not very specific about how they are created](https://docs.github.com/en/code-security/dependabot/working-with-dependabot/dependabot-options-reference#commit-message--). However, from pragmatic experience, commit messages use:
 
