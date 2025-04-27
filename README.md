@@ -97,10 +97,14 @@ A list of personal and opinionated configurations. Those are very subjective to 
 
 ### Usage
 
-If you find some useful and still want to use them, specify a reference to avoid breaking changes.
+If you find some useful and still want to use them, specify a Git reference (like short commit id) to avoid breaking changes.
 
 ```json
 {
-  "extends": ["github>davidlj95/renovate-config:personal/automerge#{gitRef}"]
+  "extends": ["github>davidlj95/renovate-config:personal/automerge#d73d806"]
 }
 ```
+
+> [!WARNING]
+> I have never used this, so not sure that it will work either.
+> [Example configs](https://docs.renovatebot.com/config-presets/#example-configs) never use a ref, just tags. However, another example about preset templates suggests it is a valid use case.
