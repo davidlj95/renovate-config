@@ -108,7 +108,11 @@ If [Semantic Commit messages](https://www.conventionalcommits.org/) are used, th
 - [Type: `chore`](https://docs.renovatebot.com/configuration-options/#semanticcommittype)
 - [Scope: `deps`](https://docs.renovatebot.com/configuration-options/#semanticcommitscope)
 
-This may not be your taste, so offering more options in here
+Unless you use the [recommended config preset `config:recommended`](https://docs.renovatebot.com/presets-config/#configrecommended) (or any other config that uses it, like `js-app|lib` or `best-practices`). In that case, the [`:semanticPrefixFixDepsChoreOthers` preset](https://docs.renovatebot.com/presets-default/#semanticprefixfixdepschoreothers) is enabled and therefore:
+
+- Type: `fix` for deps. `chore` for others
+
+Those may not be of your taste. So offering more options in here.
 
 ## Usage
 
