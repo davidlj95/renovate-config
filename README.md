@@ -4,6 +4,7 @@ A series of presets for [Renovate] dependency updates bot
 
 - [Angular](#angular)
 - [Schedule](#schedule)
+- [Commit](#commit)
 - [Personal](#personal)
 
 [Renovate config]: https://docs.renovatebot.com/configuration-options/
@@ -93,6 +94,40 @@ This will schedule your updates for the first weekend of every month. Saturday a
   "extends": [
     "github>davidlj95/renovate-config:schedule/first-weekend-month-day"
   ]
+}
+```
+
+## Commit
+
+### Why is this needed?
+
+By default, [Renovate detects the commit style of the repo to commit in the same way as previous commits](https://docs.renovatebot.com/semantic-commits/).
+
+If [Semantic Commit messages](https://www.conventionalcommits.org/) are used, the defaults are:
+
+- [Type: `chore`](https://docs.renovatebot.com/configuration-options/#semanticcommittype)
+- [Scope: `deps`](https://docs.renovatebot.com/configuration-options/#semanticcommitscope)
+
+Unless you use the [recommended config preset `config:recommended`](https://docs.renovatebot.com/presets-config/#configrecommended) (or any other config that uses it, like `js-app|lib` or `best-practices`). In that case, the [`:semanticPrefixFixDepsChoreOthers` preset](https://docs.renovatebot.com/presets-default/#semanticprefixfixdepschoreothers) is enabled and therefore:
+
+- Type: `fix` for deps. `chore` for others
+
+Those may not be of your taste. So offering more options in here.
+
+## Usage
+
+### Dependabot
+
+I like how Dependabot creates the commit messages. [Documentation is not very specific about how they are created](https://docs.github.com/en/code-security/dependabot/working-with-dependabot/dependabot-options-reference#commit-message--). However, from pragmatic experience, commit messages use:
+
+- Type: `build`
+- Scope: `deps` or `dev-deps`
+
+If you prefer this kind of dependabot-like commit messages, you can use them with this preset:
+
+```json
+{
+  "extends": ["github>davidlj95/renovate-config:commit/dependabot"]
 }
 ```
 
