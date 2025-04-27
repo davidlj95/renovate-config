@@ -13,7 +13,7 @@ Renovate allows [scheduling dependency updates](https://docs.renovatebot.com/key
 
 Therefore, sharing here some presets that may be useful. They are tested to ensure they behave as expected.
 
-## Usage
+### Usage
 
 ### First weekend of the month. During the day.
 
@@ -90,3 +90,17 @@ For more information about where version compatibility data was extracted from, 
 [zone.js]: https://www.npmjs.com/package/zone.js
 [Renovate config]: https://docs.renovatebot.com/configuration-options/
 [Renovate]: https://www.mend.io/renovate/
+
+## Personal
+
+A list of personal and opinionated configurations. Those are very subjective to change and may change at any time.
+
+### Usage
+
+If you find some useful and still want to use them, specify a reference to avoid breaking changes.
+
+```json
+{
+  "extends": ["github>davidlj95/renovate-config:personal/automerge#{gitRef}"]
+}
+```

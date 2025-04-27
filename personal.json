@@ -1,0 +1,57 @@
+{
+  "limit": {
+    "description": "PR limits I'm happy to tolerate before it's noise",
+    "prHourlyLimit": 0,
+    "prConcurrentLimit": 5
+  },
+  "timezone": {
+    "description": "The timezone I'm in",
+    "timezone": "Europe/Madrid"
+  },
+  "tags": {
+    "description": "Tags (labels) to add to PRs. Inspired from dependabot. https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax#language-qualifier",
+    "labels": ["dependencies"],
+    "packageRules": [
+      {
+        "matchManagers": ["github-actions"],
+        "addLabels": ["github-actions"]
+      },
+      {
+        "matchCategories": ["js"],
+        "addLabels": ["javascript"]
+      },
+      {
+        "matchCategories": ["node"],
+        "addLabels": ["node"]
+      }
+    ]
+  },
+  "automerge": {
+    "description": "When automerge makes sense for me",
+    "automergeSchedule": ["* 9-21 * * 1-5"],
+    "lockFileMaintenance": {
+      "automerge": true
+    },
+    "minor": {
+      "automerge": true
+    },
+    "patch": {
+      "automerge": true
+    },
+    "pin": {
+      "automerge": true
+    },
+    "pinDigest": {
+      "automerge": true
+    }
+  },
+  "config": {
+    "description": "Personally opinionated and subjective Renovate config I'm comfortable with",
+    "extends": [
+      "github>davidlj95/renovate-config:personal/limit",
+      "github>davidlj95/renovate-config:personal/timezone",
+      "github>davidlj95/renovate-config:personal/tags",
+      "github>davidlj95/renovate-config:personal/automerge"
+    ]
+  }
+}
