@@ -1,6 +1,6 @@
 {
   "first-weekend-month-day": {
     "description": "Schedule updates every first weekend's day of the month during the day",
-    "schedule": "on the 1-7 day of the month on Saturday,Sunday after 9:00 am"
+    "schedule": "* 9-23 1-7 * 0,6"
   }
 }

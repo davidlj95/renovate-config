@@ -10,7 +10,7 @@
     "test": "node --test"
   },
   "devDependencies": {
-    "@breejs/later": "4.2.0",
+    "@cheap-glitch/mi-cron": "2.0.0",
     "prettier": "3.2.5"
   }
 }
