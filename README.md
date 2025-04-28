@@ -136,17 +136,19 @@ If you prefer this kind of dependabot-like commit messages, you can use them wit
 ```
 
 ## Groups and packages
+
 The [recommended Renovate config groups some dependency updates](https://github.com/renovatebot/renovate/blob/39.262.1/lib/config/presets/internal/config.ts#L33). This way there's less noise, packages from the same monorepository are updated all at once, ...
 
 However, you may want to further reduce the noise by updating dependencies in even bigger groups. For instance, by functional purpose of those packages.
 
 For that reason, the following presets exist:
 
- - [Packages](./packages.json). With subjective groups of packages associated by programming language and functional purpose. Similar to [Renovate's packages presets in `packages.ts`](https://github.com/renovatebot/renovate/blob/39.262.1/lib/config/presets/internal/packages.ts)
+- [Packages](./packages.json). With subjective groups of packages associated by programming language and functional purpose. Similar to [Renovate's packages presets in `packages.ts`](https://github.com/renovatebot/renovate/blob/39.262.1/lib/config/presets/internal/packages.ts)
 
 - [Group](./group.json). Use the packages grouping in the previous file to group dependency updates. Essentially assigns a name to groups of dependencies to be updated together. Similar to [Renovate's group presets in `group.ts`](https://github.com/renovatebot/renovate/blob/39.262.1/lib/config/presets/internal/group.ts)
 
 ### Usage
+
 If you like that kind of grouping, you can use those groups to group your dependency updates.
 
 ```json
