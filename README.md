@@ -5,6 +5,7 @@ A series of presets for [Renovate] dependency updates bot
 - [Angular](#angular)
 - [Schedule](#schedule)
 - [Commit](#commit)
+- [Groups and packages](#groups-and-packages)
 - [Personal](#personal)
 
 [Renovate config]: https://docs.renovatebot.com/configuration-options/
@@ -79,7 +80,7 @@ For more information about where version compatibility data was extracted from, 
 Renovate allows [scheduling dependency updates](https://docs.renovatebot.com/key-concepts/scheduling/). However, specifying a period when Renovate can perform dependency updates is not so easy:
 
 - **Renovate Mend App**: if not self-hosting Renovate, the cloud app will run [from time to time](https://docs.renovatebot.com/known-limitations/#the-mend-renovate-app-and-scheduled-jobs) and see if it's the right moment to do dependency updates based on the configuration. So the schedule you define must take this into account.
-- **Schedule syntax**: at the moment of writing specified via a `cron` or via a string to be parsed with `@breejs/later` library. `cron` lines are not very straight-forward to parse as humans. With the latter, despite more human, can be prone to error. Library may fail to parse it, and [Renovate will reject it if it fails to parse it](https://github.com/renovatebot/renovate/blob/32.241.11/lib/workers/repository/update/branch/schedule.ts#L55-L59). Also specifying it in this more human-friendly syntax [will be deprecated](https://docs.renovatebot.com/key-concepts/scheduling/#deprecated-breejslater-syntax)
+- **Schedule syntax**: at the moment of writing specified via a `cron` or via a string to be parsed with `@breejs/later` library. `cron` lines are not very straight-forward to parse as humans. With the latter, despite more human, can be prone to error. Library may fail to parse it, and [Renovate will reject it if it fails to parse it](https://github.com/renovatebot/renovate/blob/39.262.1/lib/workers/repository/update/branch/schedule.ts#L63-L68). Also specifying it in this more human-friendly syntax [will be deprecated](https://docs.renovatebot.com/key-concepts/scheduling/#deprecated-breejslater-syntax)
 
 Therefore, sharing here some presets that may be useful. They are tested to ensure they behave as expected.
 
@@ -133,6 +134,41 @@ If you prefer this kind of dependabot-like commit messages, you can use them wit
   "extends": ["github>davidlj95/renovate-config:commit/dependabot"]
 }
 ```
+
+## Groups and packages
+
+The [recommended Renovate config groups some dependency updates](https://github.com/renovatebot/renovate/blob/39.262.1/lib/config/presets/internal/config.ts#L33). This way there's less noise, packages from the same monorepository are updated all at once, ...
+
+However, you may want to further reduce the noise by updating dependencies in even bigger groups. For instance, by functional purpose of those packages.
+
+For that reason, the following presets exist:
+
+- [Packages](./packages.json). With subjective groups of packages associated by programming language and functional purpose. Similar to [Renovate's packages presets in `packages.ts`](https://github.com/renovatebot/renovate/blob/39.262.1/lib/config/presets/internal/packages.ts)
+
+- [Group](./group.json). Use the packages grouping in the previous file to group dependency updates. Essentially assigns a name to groups of dependencies to be updated together. Similar to [Renovate's group presets in `group.ts`](https://github.com/renovatebot/renovate/blob/39.262.1/lib/config/presets/internal/group.ts)
+
+### Usage
+
+If you like that kind of grouping, you can use those groups to group your dependency updates.
+
+```json
+{
+  "extends": ["github>davidlj95/renovate-config:group/release"]
+}
+```
+
+Or if you want to use all groups defined at once:
+
+```json
+{
+  "extends": ["github>davidlj95/renovate-config:group/all"]
+}
+```
+
+> [!IMPORTANT]
+> Those groups are experimental and may change at some point in time
+> Use a git ref when referencing those to avoid breaking changes
+> See the [personal](#personal) section for more info on how to do that
 
 ## Personal
 

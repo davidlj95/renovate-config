@@ -1,0 +1,108 @@
+{
+  "jsDevExp": {
+    "description": "Packages to improve JS development experience",
+    "matchPackageNames": ["husky", "lint-staged", "start-server-and-test"]
+  },
+  "jsFormatters": {
+    "description": "Packages that format JS code",
+    "matchPackageNames": ["prettier"]
+  },
+  "jsLinters": {
+    "description": "Packages that lint JS code",
+    "extends": ["packages:eslint"],
+    "matchPackageNames": ["knip", "globals"]
+  },
+  "commitMessageLinters": {
+    "description": "Packages that lint commit messages",
+    "matchPackageNames": ["@commitlint/**"]
+  },
+  "release": {
+    "description": "Packages related to the release process",
+    "matchPackageNames": [
+      "semantic-release",
+      "@semantic-release/**",
+      "conventional-changelog-*",
+      "release-it",
+      "@release-it/**"
+    ]
+  },
+  "jsUnitTest": {
+    "description": "Packages related to JS unit testing",
+    "extends": ["packages:jsUnitTest"],
+    "matchPackageNames": [
+      "jasmine-*",
+      "@types/jasmine",
+      "karma",
+      "karma-*",
+      "@jest/**",
+      "ng-mocks"
+    ]
+  },
+  "jsCoverage": {
+    "description": "Packages related to JS code coverage",
+    "matchPackageNames": ["@istanbuljs/**", "nyc", "babel-plugin-istanbul"]
+  },
+  "performanceTest": {
+    "description": "Packages related to performance testing",
+    "matchPackageNames": ["@lhci/**"]
+  },
+  "e2eTest": {
+    "description": "Packages related to E2E testing",
+    "matchPackageNames": ["cypress", "@cypress/**"]
+  },
+  "jsBuild": {
+    "description": "Packages related to JS build",
+    "matchPackageNames": ["babel-loader", "ng-packagr"]
+  },
+  "typescript": {
+    "description": "Packages related to Typescript",
+    "matchPackageNames": [
+      "typescript",
+      "tslib",
+      "extensionless",
+      "dts-bundle-generator",
+      "ts-morph"
+    ]
+  },
+  "jsBundleSize": {
+    "description": "Packages that help analyzing the bundle size of a JS bundle",
+    "matchPackageNames": ["source-map-explorer", "bundlewatch"]
+  },
+  "cicd": {
+    "description": "CI/CD dependencies",
+    "matchManagers": ["circleci", "github-actions", "gitlabci"]
+  },
+  "jsRuntime": {
+    "description": "Packages related to JS runtimes",
+    "matchPackageNames": ["node", "@types/node", "tsx"]
+  },
+  "runtime": {
+    "description": "Packages related to runtimes",
+    "extends": ["github>davidlj95/renovate-config:packages/jsRuntime"],
+    "matchPackageNames": ["python"]
+  },
+  "webIcons": {
+    "description": "Packages providing icons for use in websites",
+    "matchPackageNames": ["@fortawesome/**", "@ng-icons/**", "simple-icons"]
+  },
+  "webTypographies": {
+    "description": "Packages providing typographies for use in websites",
+    "matchPackageNames": ["@fontsource/**"]
+  },
+  "webResources": {
+    "description": "Packages providing resources for its use in websites",
+    "extends": [
+      "github>davidlj95/renovate-config:packages/webIcons",
+      "github>davidlj95/renovate-config:packages/webTypographies"
+    ]
+  },
+  "docs": {
+    "description": "Packages related to documentation",
+    "matchPackageNames": [
+      "@microsoft/api-documenter",
+      "@microsoft/api-extractor",
+      "mkdocs",
+      "mkdocs-*"
+    ]
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "jsDevExp": {
+    "description": "Groups JS DevExp (DX) tools together",
+    "packageRules": [
+      {
+        "extends": ["github>davidlj95/renovate-config:packages/jsDevExp"],
+        "groupName": "JS DevExp tooling"
+      }
+    ]
+  },
+  "jsFormatters": {
+    "description": "Groups JS formatters together",
+    "packageRules": [
+      {
+        "extends": ["github>davidlj95/renovate-config:packages/jsFormatters"],
+        "groupName": "JS formatting"
+      }
+    ]
+  },
+  "jsLinters": {
+    "description": "Groups JS linters together",
+    "packageRules": [
+      {
+        "extends": ["github>davidlj95/renovate-config:packages/jsLinters"],
+        "groupName": "JS linting"
+      }
+    ]
+  },
+  "commitMessageLinters": {
+    "description": "Groups commit message linters together",
+    "packageRules": [
+      {
+        "extends": [
+          "github>davidlj95/renovate-config:packages/commitMessageLinters"
+        ],
+        "groupName": "commit message linting"
+      }
+    ]
+  },
+  "release": {
+    "description": "Groups release tools together",
+    "packageRules": [
+      {
+        "extends": ["github>davidlj95/renovate-config:packages/release"],
+        "groupName": "release tooling"
+      }
+    ]
+  },
+  "jsUnitTest": {
+    "description": "Groups JS unit test packages together",
+    "packageRules": [
+      {
+        "extends": ["github>davidlj95/renovate-config:packages/jsUnitTest"],
+        "groupName": "JS unit testing"
+      }
+    ]
+  },
+  "performanceTest": {
+    "description": "Groups performance test packages together",
+    "packageRules": [
+      {
+        "extends": [
+          "github>davidlj95/renovate-config:packages/performanceTest"
+        ],
+        "groupName": "performance testing"
+      }
+    ]
+  },
+  "e2eTest": {
+    "description": "Groups E2E test packages together",
+    "packageRules": [
+      {
+        "extends": ["github>davidlj95/renovate-config:packages/e2eTest"],
+        "groupName": "E2E testing"
+      }
+    ]
+  },
+  "jsBuild": {
+    "description": "Groups JS build packages together",
+    "packageRules": [
+      {
+        "extends": ["github>davidlj95/renovate-config:packages/jsBuild"],
+        "groupName": "E2E testing"
+      }
+    ]
+  },
+  "typescript": {
+    "description": "Groups Typescript packages together",
+    "packageRules": [
+      {
+        "extends": ["github>davidlj95/renovate-config:packages/typescript"],
+        "groupName": "typescript packages"
+      }
+    ]
+  },
+  "jsBundleSize": {
+    "description": "Groups JS bundle size packages together",
+    "packageRules": [
+      {
+        "extends": ["github>davidlj95/renovate-config:packages/jsBundleSize"],
+        "groupName": "JS bundle size packages"
+      }
+    ]
+  },
+  "cicd": {
+    "description": "Groups CICD changes together",
+    "packageRules": [
+      {
+        "extends": ["github>davidlj95/renovate-config:packages/cicd"],
+        "groupName": "CICD"
+      }
+    ]
+  },
+  "runtime": {
+    "description": "Groups runtime changes together",
+    "packageRules": [
+      {
+        "extends": ["github>davidlj95/renovate-config:packages/runtime"],
+        "groupName": "runtimes"
+      }
+    ]
+  },
+  "webResources": {
+    "description": "Groups web resources changes together",
+    "packageRules": [
+      {
+        "extends": ["github>davidlj95/renovate-config:packages/webResources"],
+        "groupName": "web resources"
+      }
+    ]
+  },
+  "docs": {
+    "description": "Groups docs tooling together",
+    "packageRules": [
+      {
+        "extends": ["github>davidlj95/renovate-config:packages/docs"],
+        "groupName": "docs tooling"
+      }
+    ]
+  },
+  "all": {
+    "description": "Applies all groups in here",
+    "extends": [
+      "github>davidlj95/renovate-config:group/jsDevExp",
+      "github>davidlj95/renovate-config:group/jsFormatters",
+      "github>davidlj95/renovate-config:group/jsLinters",
+      "github>davidlj95/renovate-config:group/commitMessageLinters",
+      "github>davidlj95/renovate-config:group/release",
+      "github>davidlj95/renovate-config:group/jsUnitTest",
+      "github>davidlj95/renovate-config:group/performanceTest",
+      "github>davidlj95/renovate-config:group/e2eTest",
+      "github>davidlj95/renovate-config:group/jsBuild",
+      "github>davidlj95/renovate-config:group/typescript",
+      "github>davidlj95/renovate-config:group/jsBundleSize",
+      "github>davidlj95/renovate-config:group/cicd",
+      "github>davidlj95/renovate-config:group/runtime",
+      "github>davidlj95/renovate-config:group/webResources",
+      "github>davidlj95/renovate-config:group/docs"
+    ]
+  }
+}
