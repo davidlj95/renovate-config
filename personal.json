@@ -53,7 +53,8 @@
       "github>davidlj95/renovate-config:personal/limit",
       "github>davidlj95/renovate-config:personal/timezone",
       "github>davidlj95/renovate-config:personal/tags",
-      "github>davidlj95/renovate-config:personal/automerge"
+      "github>davidlj95/renovate-config:personal/automerge",
+      "github>davidlj95/renovate-config:group/all"
     ]
   }
 }
