@@ -105,5 +105,34 @@
         "allowedVersions": ">=5.5.0 <5.9.0"
       }
     ]
+  },
+  "v20-lts": {
+    "description": "Angular v20 latest version dependencies version compatibility rules",
+    "extends": ["github>davidlj95/renovate-config:angular/v20.0.x"]
+  },
+  "v20.0.x": {
+    "description": "Angular v20.0.x dependencies version compatibility rules",
+    "packageRules": [
+      {
+        "matchDepNames": ["node", "@types/node"],
+        "matchFileNames": ["package.json"],
+        "allowedVersions": "^20.19.0 || ^22.12.0 || >=24.0.0"
+      },
+      {
+        "matchDepNames": ["typescript"],
+        "matchFileNames": ["package.json"],
+        "allowedVersions": ">=5.8.0 <5.9.0"
+      },
+      {
+        "matchDepNames": ["rxjs"],
+        "matchFileNames": ["package.json"],
+        "allowedVersions": "^6.5.3 || ^7.4.0"
+      },
+      {
+        "matchDepNames": ["zone.js"],
+        "matchFileNames": ["package.json"],
+        "allowedVersions": "~0.15.0"
+      }
+    ]
   }
 }

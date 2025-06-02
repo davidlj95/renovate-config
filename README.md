@@ -30,11 +30,11 @@ In order to configure [Renovate] to update dependencies within the compatible ra
 
 #### Safest: by minor version
 
-You can restrict Renovate into update dependencies whose versions are compatible with a specific Angular minor version. For instance, for Angular 19.0.x, add the following to your [Renovate config]:
+You can restrict Renovate into update dependencies whose versions are compatible with a specific Angular minor version. For instance, for Angular 20.0.x, add the following to your [Renovate config]:
 
 ```json
 {
-  "extends": ["github>davidlj95/renovate-config:angular/v19.0.x"]
+  "extends": ["github>davidlj95/renovate-config:angular/v20.0.x"]
 }
 ```
 
@@ -49,7 +49,7 @@ You can configure Renovate to update dependencies whose versions are compatible 
 
 ```json
 {
-  "extends": ["github>davidlj95/renovate-config:angular/v19-lts"]
+  "extends": ["github>davidlj95/renovate-config:angular/v20-lts"]
 }
 ```
 
@@ -59,7 +59,7 @@ You can configure Renovate to update dependencies whose versions are compatible 
 > Most of the time nothing will happen as no breaking changes should be introduced in a minor version. But who knows 🎱 The good bit: **no need to update the preset config until upgrading to a major version 🎉**
 
 > [!NOTE]
-> The `v19-lts` format is actually the [same npm tag format Angular uses to label the latest package release of a major version release](https://www.npmjs.com/package/@angular/core?activeTab=versions)
+> The `v20-lts` format is actually the [same npm tag format Angular uses to label the latest package release of a major version release](https://www.npmjs.com/package/@angular/core?activeTab=versions)
 
 ### Presets list
 
