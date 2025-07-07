@@ -1,4 +1,23 @@
 {
+  "packages": {
+    "description": "Matches Angular and related dependencies",
+    "matchPackageNames": [
+      "@angular**",
+      "@schematics**",
+      "angular-eslint",
+      "ng-packagr"
+    ]
+  },
+  "no-major-updates": {
+    "description": "Disables Angular and related dependencies major updates to do so manually",
+    "packageRules": [
+      {
+        "extends": ["github>davidlj95/renovate-config:angular/packages"],
+        "matchUpdateTypes": ["major"],
+        "enabled": false
+      }
+    ]
+  },
   "v18-lts": {
     "description": "Angular v18 latest version dependencies version compatibility rules",
     "extends": ["github>davidlj95/renovate-config:angular/v18.2.x"]
