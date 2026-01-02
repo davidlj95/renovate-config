@@ -127,7 +127,7 @@
   },
   "v20-lts": {
     "description": "Angular v20 latest version dependencies version compatibility rules",
-    "extends": ["github>davidlj95/renovate-config:angular/v20.0.x"]
+    "extends": ["github>davidlj95/renovate-config:angular/v20.1.x"]
   },
   "v20.0.x": {
     "description": "Angular v20.0.x dependencies version compatibility rules",
@@ -135,7 +135,7 @@
       {
         "matchDepNames": ["node", "@types/node"],
         "matchFileNames": ["package.json"],
-        "allowedVersions": "^20.19.0 || ^22.12.0 || >=24.0.0"
+        "allowedVersions": "^20.19.0 || ^22.12.0 || ^24.0.0"
       },
       {
         "matchDepNames": ["typescript"],
@@ -153,5 +153,9 @@
         "allowedVersions": "~0.15.0"
       }
     ]
+  },
+  "v20.1.x": {
+    "description": "Angular v20.1.x dependencies version compatibility rules",
+    "extends": ["github>davidlj95/renovate-config:angular/v20.0.x"]
   }
 }
