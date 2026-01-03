@@ -27,22 +27,22 @@
     "packageRules": [
       {
         "matchDepNames": ["node", "@types/node"],
-        "matchFileNames": ["package.json"],
+        "matchCategories": ["js"],
         "allowedVersions": "^18.19.1 || ^20.11.1 || ^22.0.0"
       },
       {
         "matchDepNames": ["typescript"],
-        "matchFileNames": ["package.json"],
+        "matchCategories": ["js"],
         "allowedVersions": ">=5.4.0 <5.5.0"
       },
       {
         "matchDepNames": ["rxjs"],
-        "matchFileNames": ["package.json"],
+        "matchCategories": ["js"],
         "allowedVersions": "^6.5.3 || ^7.4.0"
       },
       {
         "matchDepNames": ["zone.js"],
-        "matchFileNames": ["package.json"],
+        "matchCategories": ["js"],
         "allowedVersions": "~0.14.0"
       }
     ]
@@ -53,12 +53,12 @@
     "packageRules": [
       {
         "matchDepNames": ["typescript"],
-        "matchFileNames": ["package.json"],
+        "matchCategories": ["js"],
         "allowedVersions": ">=5.4.0 <5.6.0"
       },
       {
         "matchDepNames": ["zone.js"],
-        "matchFileNames": ["package.json"],
+        "matchCategories": ["js"],
         "allowedVersions": "~0.14.0"
       }
     ]
@@ -69,7 +69,7 @@
     "packageRules": [
       {
         "matchDepNames": ["zone.js"],
-        "matchFileNames": ["package.json"],
+        "matchCategories": ["js"],
         "allowedVersions": "~0.14.10"
       }
     ]
@@ -83,22 +83,22 @@
     "packageRules": [
       {
         "matchDepNames": ["node", "@types/node"],
-        "matchFileNames": ["package.json"],
+        "matchCategories": ["js"],
         "allowedVersions": "^18.19.1 || ^20.11.1 || ^22.0.0"
       },
       {
         "matchDepNames": ["typescript"],
-        "matchFileNames": ["package.json"],
+        "matchCategories": ["js"],
         "allowedVersions": ">=5.5.0 <5.7.0"
       },
       {
         "matchDepNames": ["rxjs"],
-        "matchFileNames": ["package.json"],
+        "matchCategories": ["js"],
         "allowedVersions": "^6.5.3 || ^7.4.0"
       },
       {
         "matchDepNames": ["zone.js"],
-        "matchFileNames": ["package.json"],
+        "matchCategories": ["js"],
         "allowedVersions": "~0.15.0"
       }
     ]
@@ -109,7 +109,7 @@
     "packageRules": [
       {
         "matchDepNames": ["typescript"],
-        "matchFileNames": ["package.json"],
+        "matchCategories": ["js"],
         "allowedVersions": ">=5.5.0 <5.8.0"
       }
     ]
@@ -120,7 +120,7 @@
     "packageRules": [
       {
         "matchDepNames": ["typescript"],
-        "matchFileNames": ["package.json"],
+        "matchCategories": ["js"],
         "allowedVersions": ">=5.5.0 <5.9.0"
       }
     ]
@@ -134,22 +134,22 @@
     "packageRules": [
       {
         "matchDepNames": ["node", "@types/node"],
-        "matchFileNames": ["package.json"],
+        "matchCategories": ["js"],
         "allowedVersions": "^20.19.0 || ^22.12.0 || ^24.0.0"
       },
       {
         "matchDepNames": ["typescript"],
-        "matchFileNames": ["package.json"],
+        "matchCategories": ["js"],
         "allowedVersions": ">=5.8.0 <5.9.0"
       },
       {
         "matchDepNames": ["rxjs"],
-        "matchFileNames": ["package.json"],
+        "matchCategories": ["js"],
         "allowedVersions": "^6.5.3 || ^7.4.0"
       },
       {
         "matchDepNames": ["zone.js"],
-        "matchFileNames": ["package.json"],
+        "matchCategories": ["js"],
         "allowedVersions": "~0.15.0"
       }
     ]
